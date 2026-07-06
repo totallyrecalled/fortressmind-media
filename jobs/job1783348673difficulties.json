@@ -1,0 +1,24 @@
+{
+  "id": "job1783348673difficulties",
+  "when_utc": "2026-07-08T15:00+00:00",
+  "type": "post",
+  "caption": "Difficulties strengthen the mind, as labor does the body.\n\n— Seneca",
+  "tags": [
+    "stoicism",
+    "seneca",
+    "fortressmind",
+    "discipline",
+    "selfmastery"
+  ],
+  "story": true,
+  "media": {
+    "feed": "jobs/job1783348673difficulties/feed.jpg",
+    "master": "jobs/job1783348673difficulties/master.jpg",
+    "story_video": "jobs/job1783348673difficulties/story.mp4"
+  },
+  "quote": "Difficulties strengthen the mind, as labor does the body.",
+  "author": "Seneca",
+  "slug": "difficulties-strengthen-the-mind-as-labor-does-the-body",
+  "queue_id": "q1783300618ebbd88",
+  "audio_track": "ob-lix-spaekona-viking-background-music-109374.mp3"
+}
