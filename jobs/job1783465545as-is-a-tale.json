@@ -1,0 +1,24 @@
+{
+  "id": "job1783465545as-is-a-tale",
+  "when_utc": "2026-07-07T23:10+00:00",
+  "type": "post",
+  "caption": "As is a tale, so is life: not how long it is, but how good it is, is what matters.\n\n— Seneca",
+  "tags": [
+    "stoicism",
+    "seneca",
+    "fortressmind",
+    "discipline",
+    "selfmastery"
+  ],
+  "story": true,
+  "media": {
+    "feed": "jobs/job1783465545as-is-a-tale/feed.jpg",
+    "master": "jobs/job1783465545as-is-a-tale/master.jpg",
+    "story_video": "jobs/job1783465545as-is-a-tale/story.mp4"
+  },
+  "quote": "As is a tale, so is life: not how long it is, but how good it is, is what matters.",
+  "author": "Seneca",
+  "slug": "as-is-a-tale-so-is-life-not-how-long-it-is-but-how-good-it-is-is-what-matters",
+  "queue_id": "q17834655396b5d86",
+  "audio_track": "vikingmusic-nordic-chant-amp-epic-war-background-music-344070.mp3"
+}
