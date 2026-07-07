@@ -1,0 +1,36 @@
+name: fortressmind cloud publisher
+
+# Fires scheduled @fortressmind posts even when Hadi's PC (and NEXUS) are off.
+# NEXUS pushes due jobs + media into jobs/; this cron publishes them straight
+# from the runner and commits the results back for NEXUS to reconcile on boot.
+on:
+  schedule:
+    - cron: "*/10 * * * *"      # every 10 min (GitHub may add a few min of lag)
+  workflow_dispatch: {}          # manual "Run workflow" button for testing
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fortressmind-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: publish due jobs
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python3 cloud/publish_worker.py
+
+      - name: commit results
+        run: |
+          git config user.name "nexus-cloud"
+          git config user.email "nexus-cloud@users.noreply.github.com"
+          git add -A jobs results failed 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "cloud publish run"
+          git push || true
