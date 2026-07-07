@@ -1,0 +1,24 @@
+{
+  "id": "job1783468187sometimes-ev",
+  "when_utc": "2026-07-07T23:54+00:00",
+  "type": "post",
+  "caption": "Sometimes even to live is an act of courage.\n\n— Seneca",
+  "tags": [
+    "stoicism",
+    "seneca",
+    "fortressmind",
+    "discipline",
+    "selfmastery"
+  ],
+  "story": true,
+  "media": {
+    "feed": "jobs/job1783468187sometimes-ev/feed.jpg",
+    "master": "jobs/job1783468187sometimes-ev/master.jpg",
+    "story_video": "jobs/job1783468187sometimes-ev/story.mp4"
+  },
+  "quote": "Sometimes even to live is an act of courage.",
+  "author": "Seneca",
+  "slug": "sometimes-even-to-live-is-an-act-of-courage",
+  "queue_id": "q1783468159016e63",
+  "audio_track": "the_mountain-dark-ambient-509934.mp3"
+}
