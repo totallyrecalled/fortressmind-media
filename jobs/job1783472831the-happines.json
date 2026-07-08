@@ -1,0 +1,22 @@
+{
+  "id": "job1783472831the-happines",
+  "when_utc": "2026-07-11T17:00+00:00",
+  "type": "reel",
+  "caption": "The happiness of your life depends upon the quality of your thoughts.\n\n— Marcus Aurelius",
+  "tags": [
+    "stoicism",
+    "marcusaurelius",
+    "fortressmind",
+    "discipline",
+    "selfmastery"
+  ],
+  "story": true,
+  "media": {
+    "feed": "jobs/job1783472831the-happines/reel.mp4"
+  },
+  "quote": "The happiness of your life depends upon the quality of your thoughts.",
+  "author": "Marcus Aurelius",
+  "slug": "the-happiness-of-your-life-depends-upon-the-quality-of-your-thoughts",
+  "queue_id": "q1783472756c965f3",
+  "audio_track": "vikingmusic-nordic-chant-amp-epic-war-background-music-344070.mp3"
+}
