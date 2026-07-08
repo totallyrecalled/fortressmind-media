@@ -1,0 +1,22 @@
+{
+  "id": "job1783472822first-say-to",
+  "when_utc": "2026-07-12T17:00+00:00",
+  "type": "reel",
+  "caption": "First say to yourself what you would be; and then do what you have to do.\n\n— Epictetus",
+  "tags": [
+    "stoicism",
+    "epictetus",
+    "fortressmind",
+    "discipline",
+    "selfmastery"
+  ],
+  "story": true,
+  "media": {
+    "feed": "jobs/job1783472822first-say-to/reel.mp4"
+  },
+  "quote": "First say to yourself what you would be; and then do what you have to do.",
+  "author": "Epictetus",
+  "slug": "first-say-to-yourself-what-you-would-be-and-then-do-what-you-have-to-do",
+  "queue_id": "q1783472775bda6d0",
+  "audio_track": "the_mountain-dark-ambient-509934.mp3"
+}
