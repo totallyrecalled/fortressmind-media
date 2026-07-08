@@ -1,6 +1,0 @@
-{
-  "ok": false,
-  "error": "Error: IG 400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"type\":\"OAuthException\",\"code\":9004,\"error_subcode\":2207052,\"is_transient\":false,\"error",
-  "id": "cftest_plumbing",
-  "published_at": "2026-07-08T00:28:19.692Z"
-}
