@@ -1,0 +1,22 @@
+{
+  "id": "job1783472816only-the-edu",
+  "when_utc": "2026-07-13T17:00+00:00",
+  "type": "reel",
+  "caption": "Only the educated are free.\n\n— Epictetus",
+  "tags": [
+    "stoicism",
+    "epictetus",
+    "fortressmind",
+    "discipline",
+    "selfmastery"
+  ],
+  "story": true,
+  "media": {
+    "feed": "jobs/job1783472816only-the-edu/reel.mp4"
+  },
+  "quote": "Only the educated are free.",
+  "author": "Epictetus",
+  "slug": "only-the-educated-are-free",
+  "queue_id": "q1783472792a9aa08",
+  "audio_track": "vikingmusic-epic-war-background-music-cinematic-viking-battle-344069.mp3"
+}
