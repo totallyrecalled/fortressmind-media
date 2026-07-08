@@ -188,7 +188,9 @@ def main():
     os.makedirs("results", exist_ok=True)
     os.makedirs("failed", exist_ok=True)
     now = datetime.now(timezone.utc)
-    ran = 0
+
+    # Collect every DUE job, sorted by its scheduled time (oldest first).
+    due_jobs = []
     for f in sorted(os.listdir("jobs")) if os.path.isdir("jobs") else []:
         if not f.endswith(".json"):
             continue
@@ -207,27 +209,40 @@ def main():
             continue
         if due_dt > now:
             continue
-        jid = job.get("id") or os.path.splitext(f)[0]
-        print(f"publishing job {jid} (due {due}, type {job.get('type')})…")
-        try:
-            res = run_job(job)
-        except Exception as e:
-            res = {"ok": False, "error": str(e)[:300]}
-        res["id"] = jid
-        res["published_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-        with open(os.path.join("results", jid + ".json"), "w", encoding="utf-8") as out:
-            json.dump(res, out, ensure_ascii=False, indent=2)
-        media_dir = os.path.join("jobs", jid)
-        if res.get("ok"):
-            os.remove(path)
-            if os.path.isdir(media_dir):
-                shutil.rmtree(media_dir, ignore_errors=True)
-            print(f"  OK {res.get('permalink')}")
-        else:
-            shutil.move(path, os.path.join("failed", jid + ".json"))
-            print(f"  FAILED: {res.get('error')} (media kept, no retry)")
-        ran += 1
-    print(f"done — {ran} job(s) attempted.")
+        due_jobs.append((due_dt, path, job))
+
+    if not due_jobs:
+        print("no jobs due.")
+        return 0
+
+    # PACING: publish only the OLDEST-due job this run (mirrors the local
+    # scheduler's one-per-tick rule). A backlog drains one per cron cycle / nudge
+    # instead of dumping every overdue post to the feed back-to-back in one run —
+    # the bunching that put two posts 1 min apart instead of their real spacing.
+    due_jobs.sort(key=lambda x: x[0])
+    if len(due_jobs) > 1:
+        print(f"{len(due_jobs)} jobs due — publishing the oldest, pacing the rest.")
+    due_dt, path, job = due_jobs[0]
+    jid = job.get("id") or os.path.splitext(os.path.basename(path))[0]
+    print(f"publishing job {jid} (due {job.get('when_utc')}, type {job.get('type')})…")
+    try:
+        res = run_job(job)
+    except Exception as e:
+        res = {"ok": False, "error": str(e)[:300]}
+    res["id"] = jid
+    res["published_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    with open(os.path.join("results", jid + ".json"), "w", encoding="utf-8") as out:
+        json.dump(res, out, ensure_ascii=False, indent=2)
+    media_dir = os.path.join("jobs", jid)
+    if res.get("ok"):
+        os.remove(path)
+        if os.path.isdir(media_dir):
+            shutil.rmtree(media_dir, ignore_errors=True)
+        print(f"  OK {res.get('permalink')}")
+    else:
+        shutil.move(path, os.path.join("failed", jid + ".json"))
+        print(f"  FAILED: {res.get('error')} (media kept, no retry)")
+    print(f"done — 1 of {len(due_jobs)} due job(s) published; rest pace on the next run.")
     return 0
 
 
