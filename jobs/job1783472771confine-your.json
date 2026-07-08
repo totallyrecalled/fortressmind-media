@@ -1,0 +1,24 @@
+{
+  "id": "job1783472771confine-your",
+  "when_utc": "2026-07-09T15:00+00:00",
+  "type": "post",
+  "caption": "Confine yourself to the present.\n\n— Marcus Aurelius",
+  "tags": [
+    "stoicism",
+    "marcusaurelius",
+    "fortressmind",
+    "discipline",
+    "selfmastery"
+  ],
+  "story": true,
+  "media": {
+    "feed": "jobs/job1783472771confine-your/feed.jpg",
+    "master": "jobs/job1783472771confine-your/master.jpg",
+    "story_video": "jobs/job1783472771confine-your/story.mp4"
+  },
+  "quote": "Confine yourself to the present.",
+  "author": "Marcus Aurelius",
+  "slug": "confine-yourself-to-the-present",
+  "queue_id": "q1783472471dd1c4e",
+  "audio_track": "joelfazhari-broken-shields-epic-tribal-viking-music-464888.mp3"
+}
