@@ -1,0 +1,24 @@
+{
+  "id": "job1783642328we-suffer-mo",
+  "when_utc": "2026-07-10T09:00+00:00",
+  "type": "post",
+  "caption": "The fortress is built in silence.\nNot in applause — in the hours no one witnesses.\nEvery stone laid when no one was watching.",
+  "tags": [
+    "stoicism",
+    "seneca",
+    "fortressmind",
+    "discipline",
+    "selfmastery"
+  ],
+  "story": true,
+  "media": {
+    "feed": "jobs/job1783642328we-suffer-mo/feed.jpg",
+    "master": "jobs/job1783642328we-suffer-mo/master.jpg",
+    "story_video": "jobs/job1783642328we-suffer-mo/story.mp4"
+  },
+  "quote": "We suffer more often in imagination than in reality.",
+  "author": "Seneca",
+  "slug": "we-suffer-more-often-in-imagination-than-in-reality",
+  "queue_id": "q17836305820046a7",
+  "audio_track": "vikingmusic-nordic-chant-amp-epic-war-background-music-344070.mp3"
+}
